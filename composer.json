@@ -1,5 +1,5 @@
 {
-    "name": "mediagone/common-smalluid",
+    "name": "mediagone/smalluid",
     "type": "library",
     "description": "Small Unique Identifier - Quite like an ULID, but half smaller (64 bits).",
     "keywords": ["uuid", "ulid", "guid", "primary key", "entity", "database"],

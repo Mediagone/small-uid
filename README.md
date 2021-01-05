@@ -1,4 +1,4 @@
-# Common SmallUID
+# Small UID
 
 ⚠️ _This project is in experimental phase, the API may change any time._
 
@@ -19,7 +19,7 @@ This package requires **PHP (64-bit) 7.4+**
 
 Add it as Composer dependency:
 ```sh
-$ composer require mediagone/common-smalluid
+$ composer require mediagone/smalluid
 ```
 
 
@@ -58,12 +58,12 @@ However, **sort order within the same millisecond is not guaranteed** because of
 
 ## License
 
-_Common SmallUID_ is licensed under MIT license. See LICENSE file.
+_Small UID_ is licensed under MIT license. See LICENSE file.
 
 
-[ico-version]: https://img.shields.io/packagist/v/mediagone/common-smalluid.svg
-[ico-downloads]: https://img.shields.io/packagist/dt/mediagone/common-smalluid.svg
+[ico-version]: https://img.shields.io/packagist/v/mediagone/smalluid.svg
+[ico-downloads]: https://img.shields.io/packagist/dt/mediagone/smalluid.svg
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
 
-[link-packagist]: https://packagist.org/packages/mediagone/common-smalluid
-[link-downloads]: https://packagist.org/packages/mediagone/common-smalluid
+[link-packagist]: https://packagist.org/packages/mediagone/smalluid
+[link-downloads]: https://packagist.org/packages/mediagone/smalluid
