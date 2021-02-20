@@ -1,8 +1,8 @@
 {
-    "name": "mediagone/smalluid",
+    "name": "mediagone/small-uid",
     "type": "library",
     "description": "Small Unique Identifier - Quite like an ULID, but half smaller (64 bits).",
-    "keywords": ["uuid", "ulid", "guid", "primary key", "entity", "database"],
+    "keywords": ["uid", "uuid", "ulid", "guid", "primary key", "entity", "database"],
     "license": "MIT",
     "authors": [
         {"name": "Bruce Suire", "role": "Developer"}
