@@ -46,7 +46,7 @@ $ composer require mediagone/small-uid-doctrine
 
 UUIDs are frequently used as database _Primary Key_ in software development. However, they aren't the best choice mainly due to their random sorting and the resulting fragmentation in databases indexes. Using [ULID](https://github.com/ulid/spec) is generally a very good alternative, solving most of UUID flaws.
 
-_SmallUIDs_ are also an ideal alternative **when you do not need as much uniqueness and require shorter "user-friendly" encoded strings**. They are _64-bit_ integers (_44-bit_ timestamp followed by _20 random bits_):
+_Small UIDs_ are also an ideal alternative **when you do not need as much uniqueness and require shorter "user-friendly" encoded strings**. They are _64-bit_ integers (_44-bit_ timestamp followed by _20 random bits_):
 
     |-----------------------|  |------------|
             Timestamp            Randomness
@@ -58,7 +58,7 @@ The random number suffix still guarantees a decent amount of uniqueness when man
 
 ## Examples of usage
 
-### Generating SMUID
+### Generating Small UIDs
 
 ```php
 $uid = SmallUid::random();  // e.g. 01AN4Z07BY79KA1307SR9X4MV3
@@ -69,14 +69,14 @@ $uid = SmallUid::fromString($base62String);
 
 ## Sorting
 
-Because of the sequential timestamp, _SmallUIDs_ are naturally sorted chronologically. It **improves indexing** when inserting values in databases, new ids being appended to the end of the table without reshuffling existing data (see more [in this article](https://www.codeproject.com/Articles/388157/GUIDs-as-fast-primary-keys-under-multiple-database)).
+Because of the sequential timestamp, _Small UIDs_ are naturally sorted chronologically. It **improves indexing** when inserting values in databases, new ids being appended to the end of the table without reshuffling existing data (see more [in this article](https://www.codeproject.com/Articles/388157/GUIDs-as-fast-primary-keys-under-multiple-database)).
 
 However, **sort order within the same millisecond is not guaranteed** because of the random suffix.
 
 
 ## License
 
-_SmallUID_ is licensed under MIT license. See LICENSE file.
+_Small UID_ is licensed under MIT license. See LICENSE file.
 
 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
