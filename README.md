@@ -14,6 +14,17 @@ Small UIDs are short unique identifiers especially designed to be used as effici
 - User-friendly strings are generated in a way to be always very different (no shared prefix due to similar timestamps)
 
 
+| |Small UID|ULID|UUID v4|
+|---|:---:|:---:|:---:|
+|Size|64 bits|128 bits|128 bits|
+|Monotonic sort order|Yes&ast;|Yes|No|
+|Random bits| 20 | 80 |122|
+|Collision odds&ast;&ast;| 1,048,576 _/ ms_ | 1.099e+12 / ms| 2.305e+18 |
+&ast; _monotonic sort order, but random when generated at the same millisecond._\
+&ast;&ast; _theorical number of generated uids before the first expected collision._
+
+
+
 ## Installation
 
 This package requires **PHP (64-bit) 7.4+** and **GMP extension**.
