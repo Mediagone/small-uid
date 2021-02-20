@@ -34,6 +34,12 @@ Add it as Composer dependency:
 $ composer require mediagone/small-uid
 ```
 
+If you're using Doctrine ORM, you'll probably want to install also appropriate custom types:
+```sh
+$ composer require mediagone/small-uid-doctrine
+```
+
+
 
 ## Introduction
 
