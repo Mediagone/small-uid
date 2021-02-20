@@ -62,7 +62,6 @@ The random number suffix still guarantees a decent amount of uniqueness when man
 ```php
 $uid = SmallUid::random();  // e.g. 01AN4Z07BY79KA1307SR9X4MV3
 $uid = SmallUid::fromString($base62String);
-$uid = SmallUid::fromBinary($binaryString);
 ```
 
 
