@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Mediagone\Common\SmallUid;
+namespace Tests\Mediagone\SmallUid;
 
-use Mediagone\Common\SmallUid\SmallUid;
+use Mediagone\SmallUid\SmallUid;
 
 
 class ExtendedSmallUid extends SmallUid

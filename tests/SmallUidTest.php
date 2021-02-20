@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace Tests\Mediagone\Common\SmallUid;
+namespace Tests\Mediagone\SmallUid;
 
 use DateTime;
 use InvalidArgumentException;
-use Mediagone\Common\SmallUid\SmallUid;
 use Mediagone\Common\Types\Text\Hex;
+use Mediagone\SmallUid\SmallUid;
 use PHPUnit\Framework\TestCase;
 
 

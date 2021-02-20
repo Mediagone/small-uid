@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Mediagone\Common\SmallUid;
+namespace Mediagone\SmallUid;
 
 use DateTimeImmutable;
 use InvalidArgumentException;

@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mediagone\\Common\\SmallUid\\": "src/"
+            "Mediagone\\SmallUid\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Mediagone\\Common\\SmallUid\\": "tests/"
+            "Tests\\Mediagone\\SmallUid\\": "tests/"
         }
     },
     "require": {
