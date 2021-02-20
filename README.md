@@ -20,7 +20,7 @@ This package requires **PHP (64-bit) 7.4+** and **GMP extension**.
 
 Add it as Composer dependency:
 ```sh
-$ composer require mediagone/smalluid
+$ composer require mediagone/small-uid
 ```
 
 
