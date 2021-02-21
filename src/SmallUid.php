@@ -134,6 +134,12 @@ class SmallUid implements ValueObject
     }
     
     
+    final public function __toString() : string
+    {
+        return $this->value;
+    }
+    
+    
     /**
      * Return the uid's base62 string representation.
      */
