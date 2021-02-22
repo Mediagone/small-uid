@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 
 /**
- * @covers \Mediagone\Common\SmallUid\SmallUid
+ * @covers \Mediagone\SmallUid\SmallUid
  */
 final class SmallUidTest extends TestCase
 {
@@ -33,7 +33,7 @@ final class SmallUidTest extends TestCase
     public function test_can_be_created_from_a_valid_string() : void
     {
         $uid = SmallUid::fromString('LscmjzUyKLR');
-        self::assertSame('LscmjzUyKLR', $uid->toString()); //1234567890abcdef
+        self::assertSame('LscmjzUyKLR', (string)$uid); //1234567890abcdef
     }
     
     
@@ -50,8 +50,8 @@ final class SmallUidTest extends TestCase
         $uid = SmallUid::fromHex($hex);
         
         self::assertInstanceOf(SmallUid::class, $uid);
-        self::assertSame('LscmjzUyKLR', $uid->toString());
-        self::assertSame($hex->toString(), $uid->toHex()->toString());
+        self::assertSame('LscmjzUyKLR', (string)$uid);
+        self::assertSame((string)$hex, (string)$uid->toHex());
     }
     
     
@@ -88,15 +88,7 @@ final class SmallUidTest extends TestCase
     {
         $uid = SmallUid::fromString('LscmjzUyKLR');
         
-        self::assertSame('LscmjzUyKLR', $uid->toString());
-    }
-    
-    
-    public function test_can_be_returned_as_string() : void
-    {
-        $uid = SmallUid::fromString('LscmjzUyKLR');
-        
-        self::assertSame('LscmjzUyKLR', $uid->toString());
+        self::assertSame('LscmjzUyKLR', (string)$uid);
     }
     
     
@@ -105,7 +97,7 @@ final class SmallUidTest extends TestCase
         $uid = SmallUid::fromString('LscmjzUyKLR');
         
         self::assertInstanceOf(Hex::class, $uid->toHex());
-        self::assertSame('1234567890abcdef', $uid->toHex()->toString());
+        self::assertSame('1234567890abcdef', (string)$uid->toHex());
     }
     
     
@@ -125,8 +117,8 @@ final class SmallUidTest extends TestCase
     
     public function test_nil_uid_is_valid() : void
     {
-        self::assertSame('0', SmallUid::nil()->toString());
-        self::assertSame('0000000000000000', SmallUid::nil()->toHex()->toString());
+        self::assertSame('0', (string)SmallUid::nil());
+        self::assertSame('0000000000000000', (string)SmallUid::nil()->toHex());
     }
     
     

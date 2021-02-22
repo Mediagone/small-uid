@@ -51,7 +51,7 @@ class SmallUid implements ValueObject
         }
         
         $this->hex = $hex;
-        $this->value = self::hexToBase62($hex->toString());
+        $this->value = self::hexToBase62((string)$hex);
     }
     
     
@@ -141,15 +141,6 @@ class SmallUid implements ValueObject
     
     
     /**
-     * Return the uid's base62 string representation.
-     */
-    final public function toString() : string
-    {
-        return $this->value;
-    }
-    
-    
-    /**
      * Returns the uid's underlying Hex string.
      */
     final public function toHex() : Hex
@@ -165,7 +156,7 @@ class SmallUid implements ValueObject
     final public function getDatetime() : DateTimeImmutable
     {
         $timestampLength = self::TOTAL_CHARS_LENGTH - self::RANDOM_CHARS_LENGTH;
-        $baseTimestamp = (string)hexdec(substr($this->hex->toString(), 0, $timestampLength));
+        $baseTimestamp = (string)hexdec(substr((string)$this->hex, 0, $timestampLength));
         
         $seconds = (int)substr($baseTimestamp, 0, - 3);
         
@@ -215,7 +206,7 @@ class SmallUid implements ValueObject
     {
         $randomHex = Hex::random(self::RANDOM_CHARS_LENGTH);
         
-        return str_pad($randomHex->toString(), self::RANDOM_CHARS_LENGTH, '0', STR_PAD_LEFT);
+        return str_pad((string)$randomHex, self::RANDOM_CHARS_LENGTH, '0', STR_PAD_LEFT);
     }
     
     
