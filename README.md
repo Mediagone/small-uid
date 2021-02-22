@@ -42,6 +42,7 @@ $ composer require mediagone/small-uid-doctrine
 
 
 
+
 ## Introduction
 
 UUIDs are frequently used as database _Primary Key_ in software development. However, they aren't the best choice mainly due to their random sorting and the resulting fragmentation in databases indexes. Using [ULID](https://github.com/ulid/spec) is generally a very good alternative, solving most of UUID flaws.
