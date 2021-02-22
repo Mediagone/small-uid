@@ -19,7 +19,7 @@ Small UIDs are short unique identifiers especially designed to be used as effici
 |Size|64 bits|128 bits|128 bits|
 |Monotonic sort order|Yes &ast;|Yes|No|
 |Random bits| 20 | 80 |122|
-|Collision odds &ast;&ast;| 1,048,576 _/ ms_ | 1.099e+12 / ms| 2.305e+18 |
+|Collision odds &ast;&ast;| 1,048,576 _/ ms_ | 1.099e+12 _/ ms_| 2.305e+18 |
 
 &ast; _monotonic sort order, but random when generated at the same millisecond._\
 &ast;&ast; _theorical number of generated uids before the first expected collision._
@@ -61,7 +61,7 @@ The random number suffix still guarantees a decent amount of uniqueness when man
 ### Generating Small UIDs
 
 ```php
-$uid = SmallUid::random();  // e.g. 01AN4Z07BY79KA1307SR9X4MV3
+$uid = SmallUid::random();  // e.g. 1GUDp752fwX
 $uid = SmallUid::fromString($base62String);
 ```
 
