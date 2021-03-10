@@ -90,7 +90,7 @@ class SmallUid implements ValueObject
     final public static function fromString(string $base62string)
     {
         if (! self::isValueValid($base62string)) {
-            throw new InvalidArgumentException('Invalid base62 string (' . $base62string . ') for ' . static::class . ', it must only contains a-z or 0-9 chars."');
+            throw new InvalidArgumentException('Invalid base62 string ("' . $base62string . '") supplied for "' . static::class . '::fromString", it must only contains a-z or 0-9 chars."');
         }
         
         return new static(Hex::fromString(self::base62ToHex($base62string)));
