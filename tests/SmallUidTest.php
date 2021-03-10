@@ -4,8 +4,8 @@ namespace Tests\Mediagone\SmallUid;
 
 use DateTime;
 use InvalidArgumentException;
-use Mediagone\Common\Types\Text\Hex;
 use Mediagone\SmallUid\SmallUid;
+use Mediagone\Types\Common\System\Hex;
 use PHPUnit\Framework\TestCase;
 
 

@@ -4,8 +4,8 @@ namespace Mediagone\SmallUid;
 
 use DateTimeImmutable;
 use InvalidArgumentException;
-use Mediagone\Common\Types\Text\Hex;
-use Mediagone\Common\Types\ValueObject;
+use Mediagone\Types\Common\System\Hex;
+use Mediagone\Types\Common\ValueObject;
 use function base_convert;
 use function explode;
 use function gmp_init;
