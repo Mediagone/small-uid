@@ -4,6 +4,7 @@ namespace Mediagone\SmallUid;
 
 use DateTimeImmutable;
 use InvalidArgumentException;
+use Mediagone\Types\Common\System\DateTimeUTC;
 use Mediagone\Types\Common\System\Hex;
 use Mediagone\Types\Common\ValueObject;
 use function base_convert;
@@ -153,14 +154,14 @@ class SmallUid implements ValueObject
     /**
      * Returns the uid's timestamp as a date time object (without milliseconds).
      */
-    final public function getDatetime() : DateTimeImmutable
+    final public function getDatetime() : DateTimeUTC
     {
         $timestampLength = self::TOTAL_CHARS_LENGTH - self::RANDOM_CHARS_LENGTH;
         $baseTimestamp = (string)hexdec(substr((string)$this->hex, 0, $timestampLength));
         
         $seconds = (int)substr($baseTimestamp, 0, - 3);
         
-        return (new DateTimeImmutable())->setTimestamp($seconds);
+        return DateTimeUTC::fromTimestamp($seconds);
     }
     
     

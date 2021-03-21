@@ -5,6 +5,7 @@ namespace Tests\Mediagone\SmallUid;
 use DateTime;
 use InvalidArgumentException;
 use Mediagone\SmallUid\SmallUid;
+use Mediagone\Types\Common\System\DateTimeUTC;
 use Mediagone\Types\Common\System\Hex;
 use PHPUnit\Framework\TestCase;
 
@@ -111,7 +112,9 @@ final class SmallUidTest extends TestCase
         $randomPart = 'AAAAA';
         $uid = SmallUid::fromHex(Hex::fromString($timestampPart . $randomPart));
         
-        self::assertSame($now->format('Y-m-d H:i:s'), $uid->getDatetime()->format('Y-m-d H:i:s'));
+        $datetime = $uid->getDatetime();
+        self::assertInstanceOf(DateTimeUTC::class, $datetime);
+        self::assertSame($now->format('Y-m-d H:i:s'), $datetime->format('Y-m-d H:i:s'));
     }
     
     
