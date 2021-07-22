@@ -23,7 +23,7 @@
     "require": {
         "php-64bit": "^7.4|^8.0",
         "ext-gmp": "*",
-        "mediagone/types-common": "^0.5.1"
+        "mediagone/types-common": "^0.5.1|^0.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0"
