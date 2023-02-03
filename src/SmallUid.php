@@ -151,6 +151,15 @@ class SmallUid implements ValueObject
     }
     
     
+    /**
+     * Returns the uid's underlying Hex string as int.
+     */
+    final public function toDecimal() //: Hex
+    {
+        return hexdec((string)$this->hex);
+    }
+    
+    
     
     /**
      * Returns the uid's timestamp as a date time object (without milliseconds).

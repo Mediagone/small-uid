@@ -34,7 +34,7 @@ final class SmallUidTest extends TestCase
     public function test_can_be_created_from_a_valid_string() : void
     {
         $uid = SmallUid::fromString('LscmjzUyKLR');
-        self::assertSame('LscmjzUyKLR', (string)$uid); //1234567890abcdef
+        self::assertSame('LscmjzUyKLR', (string)$uid); // 1234567890abcdef
     }
     
     
@@ -99,6 +99,14 @@ final class SmallUidTest extends TestCase
         
         self::assertInstanceOf(Hex::class, $uid->toHex());
         self::assertSame('1234567890abcdef', (string)$uid->toHex());
+    }
+    
+    
+    public function test_can_be_returned_as_Decimal() : void
+    {
+        $uid = SmallUid::fromString('LscmjzUyKLR');
+        
+        self::assertSame(1311768467294899695, $uid->toDecimal());
     }
     
     
@@ -173,7 +181,7 @@ final class SmallUidTest extends TestCase
     }
     
     
-    public function test_can_be_extended() : void
+    public function test_class_can_be_extended() : void
     {
         self::assertInstanceOf(SmallUid::class, ExtendedSmallUid::nil());
         self::assertInstanceOf(ExtendedSmallUid::class, ExtendedSmallUid::nil());

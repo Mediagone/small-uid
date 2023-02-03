@@ -65,7 +65,7 @@ Because of the sequential timestamp, _Small UIDs_ are naturally sorted chronolog
 However, **sort order within the same millisecond is not guaranteed** because of the random bits suffix.
 
 
-## # <a name="install"></a>Installation
+## <a name="install"></a>Installation
 
 This package requires **PHP (64-bit) 7.4+** and **GMP extension**.
 
@@ -132,6 +132,7 @@ Uids can also be converted to an 8-bit binary string (_eg. for database persiste
 ```php
 $uid = SmallUid::fromString('LscmjzUyKLR');
 
+(string)$uid->toHex()->toDecimal(); // int(1311768467294899695)
 (string)$uid->toHex()->toHex()->toBinary(); // string(8) "4Vx" (binary string)
 ```
 
