@@ -120,7 +120,7 @@ final class SmallUidTest extends TestCase
         $randomPart = 'AAAAA';
         $uid = SmallUid::fromHex(Hex::fromString($timestampPart . $randomPart));
         
-        $datetime = $uid->getDatetime();
+        $datetime = $uid->getCreationDatetime();
         self::assertInstanceOf(DateTimeUTC::class, $datetime);
         self::assertSame($now->format('Y-m-d H:i:s'), $datetime->format('Y-m-d H:i:s'));
     }

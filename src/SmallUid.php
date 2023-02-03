@@ -164,7 +164,7 @@ class SmallUid implements ValueObject
     /**
      * Returns the uid's timestamp as a date time object (without milliseconds).
      */
-    final public function getDatetime() : DateTimeUTC
+    final public function getCreationDatetime() : DateTimeUTC
     {
         $timestampLength = self::TOTAL_CHARS_LENGTH - self::RANDOM_CHARS_LENGTH;
         $baseTimestamp = (string)hexdec(substr((string)$this->hex, 0, $timestampLength));

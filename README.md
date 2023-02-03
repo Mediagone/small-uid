@@ -47,7 +47,6 @@ Small UIDs are short unique identifiers especially designed to be used as effici
 
 
 
-
 They are internally stored as _64-bit_ integers (_44-bit_ timestamp followed by _20 random bits_):
 
     |-----------------------|  |------------|
@@ -81,7 +80,6 @@ $ composer require mediagone/small-uid-doctrine
 
 
 ## Usages
-
 
 ### <a name="create"></a>Creation
 Most useful way to generate an Uid is the `random()` static factory method, which creates a new random Uid using the current timestamp and a random suffix:
@@ -128,7 +126,7 @@ $uid = SmallUid::fromString('LscmjzUyKLR');
 (string)$uid->getHex(); // string(16) "1234567890abcdef"
 ```
 
-Uids can also be converted to an 8-bit binary string (_eg. for database persistence_):
+Uids can also be converted to an 8-bit integer or a binary string (_eg. for database persistence_):
 ```php
 $uid = SmallUid::fromString('LscmjzUyKLR');
 
@@ -143,7 +141,7 @@ Every Uid embeds a timestamp reflecting its creation datetime:
 ```php
 $uid = SmallUid::fromHex('1234567890abcdef');
 
-$creationDatetime = $uid->getDatetime(); // retrieve Uid's creation datetime
+$datetime = $uid->getCreationDatetime(); // retrieve Uid's creation datetime
 (string)$creationDatetime; // "2009-08-23T03:58:16+00:00"
 ```
 
