@@ -2,7 +2,6 @@
 
 namespace Mediagone\SmallUid;
 
-use DateTimeImmutable;
 use InvalidArgumentException;
 use Mediagone\Types\Common\System\DateTimeUTC;
 use Mediagone\Types\Common\System\Hex;
