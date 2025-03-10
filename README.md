@@ -131,7 +131,7 @@ Uids can also be converted to an 8-bit integer or a binary string (_eg. for data
 $uid = SmallUid::fromString('LscmjzUyKLR');
 
 (string)$uid->toHex()->toDecimal(); // int(1311768467294899695)
-(string)$uid->toHex()->toHex()->toBinary(); // string(8) "4Vx" (binary string)
+(string)$uid->toHex()->toBinary(); // string(8) "4Vx" (binary string)
 ```
 
 
